@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
- <meta charset="utf-8">
+   <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="description" content="">
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +41,9 @@
 
  <link rel="stylesheet" href="/theme/css/mstyles.css" />
  <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+
+
 
 
 </head>
@@ -111,24 +115,149 @@
       </div>
       <main class="mblog mdl-layout__content">
 
-<!--
-<div class="mblog mdl-layout mdl-js-layout">
-<main class="mdl-layout__content">
-<div class="mblog__posts mdl-grid">
+    <!-- from SO -->
+    <script type="text/javascript">
+            function bookmark() {
+                // Mozilla Firefox Bookmark
+                if ('sidebar' in window && 'addPanel' in window.sidebar) {
+                    window.sidebar.addPanel(location.href,document.title,"");
+                } else if( /*@cc_on!@*/false) { // IE Favorite
+                    window.external.AddFavorite(location.href,document.title);
+                } else { // webkit - safari/chrome
+                    alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                }
+            };
+    </script>
+
+            <!--
+            <div class="m-back">
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="go back" role="button">
+                    <i class="material-icons" role="presentation">arrow_back</i>
+                </a>
+            </div>
+            -->
+            <div class="mblog__posts mdl-grid">
+                <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+                   <!-- entry title -->
+                   <h3 class="entry-title">
+                    <a href="/zhe-teng-bo-ke-de-gan-xiang.html" rel="bookmark"
+                    title="Permalink to 折腾博客的感想">折腾博客的感想</a></h3>
+                  </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
+                        <div>
+
+                         <abbr class="published" title="2017-03-01T00:00:00+08:00">
+                          三 01 三月 2017
+                         </abbr>
+                         <!--
+                          By                           <a class="url fn" href="/author/sherlock-holo.html">Sherlock Holo</a>
+                         </address>
+                          -->
+                            <!--
+                            <strong>The Newist</strong>
+                            <span>2 days ago</span>
+                           -->
+                        </div>
+                        <div class="section-spacer"></div>
+                        <!--
+                        <div class="meta__favorites">
+                            425 <i class="material-icons" role="presentation">favorite</i>
+                            <span class="visuallyhidden">favorites</span>
+                        </div>
+                       -->
+                        <div>
+                        <button id="bookmark-button" class="mdl-button mdl-js-button mdl-button--icon" onclick="bookmark()">
+                            <i class="material-icons" role="presentation">bookmark</i>
+                            <span class="visuallyhidden">bookmark</span>
+                        </button>
+                        </div>
+
+                        <div id="share-section">
+
+                         <button id="share-button"
+                                 class="mdl-button mdl-js-button mdl-button--icon">
+                                 <i class="material-icons" role="presentation">share</i>
+                         </button>
+
+                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                             for="share-button">
+
+
+<ul class="shareList">
+
+<li>
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url={ zhe-teng-bo-ke-de-gan-xiang.html }" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" alt="Google plus">
+<i class="fa fa-google-plus-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u=zhe-teng-bo-ke-de-gan-xiang.html" target="_blank" alt="facebook">
+<i class="fa fa-facebook-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=zhe-teng-bo-ke-de-gan-xiang.html" target="_blank" alt="LinkedIn">
+<i class="fa fa-linkedin-square fa-3x"></i>
+</a>
+</li>
+
+<li>
+<!-- Pinterest -->
+<a alt="Pinterest" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+<i class="fa fa-pinterest-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Reddit -->
+<li>
+<a alt="Reddit" href="http://reddit.com/submit?url=zhe-teng-bo-ke-de-gan-xiang.html&amp;title=折腾博客的感想" target="_blank">
+<i class="fa fa-reddit-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Tumblr-->
+<li>
+<a alt="Tumblr" href="http://www.tumblr.com/share/link?url=zhe-teng-bo-ke-de-gan-xiang.html&amp;title=" target="_blank">
+<i class="fa fa-tumblr-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Twitter -->
+<li>
+<a alt="Twitter" href="https://twitter.com/share?url=zhe-teng-bo-ke-de-gan-xiang.html&amp;text=;hashtags=" target="_blank">
+<i class="fa fa-twitter-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Email -->
+<li>
+<a alt="Email" href="mailto:?Subject=zhe-teng-bo-ke-de-gan-xiang.html&amp;Body=折腾博客的感想 zhe-teng-bo-ke-de-gan-xiang.html">
+<i class="fa fa-email-square fa-3x"> </i>
+</a>
+</li>
+
+<!-- Print
+<li>
+<a alt="Print" href="javascript:;" onclick="window.print()">
+<i  class="fa fa-print fa-3x"> </i>
+</a>
+</li>
 -->
 
-<div class="mblog__posts mdl-grid">
+</ul>                         </ul>
 
-<div class="cat_title mdl-cell mdl-cell--12-col mdl-color--primary">
-<div> <h2 class="mdl-color-text--white"> 杂谈 </h2> </div>
-</div>
-
-<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"><a href="/zhe-teng-bo-ke-de-gan-xiang.html" rel="bookmark" title="Permalink to 折腾博客的感想">折腾博客的感想</a></h3>
-    </div>
-    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-      <p>不知不觉已经到了3月1号呀，都不知道2月怎么突然就没了的。。。</p>
+                        </div>
+                    </div>
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                         <p>不知不觉已经到了3月1号呀，都不知道2月怎么突然就没了的。。。</p>
 <p>在27号晚上决定折腾个博客玩玩，因为夏娜酱和狼狼都有，这次终于没忍住，开始了漫长(本当に?)的建立博客之路了</p>
 <p>一开始上网看到hexo比较简单，而且官方有中文指引，觉得不错就开始使用hexo，但是。。。</p>
 <p>这无法使用material主题是闹哪样嗷呜！默认主题还过得去但是咱不喜欢呀，而material主题又用不了，一气之下
@@ -139,107 +268,31 @@
 <p>安装完后，看到狼狼的这篇<a href="https://blog.yoitsu.moe/pelican/pelican_output.html">发布 Pelican 博客的几种方式</a>
 可以使用<code>pelican-quickstart</code>来快速创建，于是便运行命令</p>
 <p>接下来看到的提示信息瞬间让咱冷静下来。。。</p>
-<p>因为提示信息是英文的(夏洛克狼英语并不好😔)，然后有些可以直接回车有些需要输入信息。虽然说生成后可以改<code>pelicanconf …</code></p>
-    </div>
+<p>因为提示信息是英文的(夏洛克狼英语并不好😔)，然后有些可以直接回车有些需要输入信息。虽然说生成后可以改<code>pelicanconf.py</code>
+但是也不能乱来，后期改起来很麻烦的。。。</p>
+<p>一番折腾下来，博客总算在github pages上扎土生根了😋</p>
+<p>其中折腾github发布最尴尬，因为有时候顺手mkae clean了，就会把output目录删除了。。。里面有<code>/git</code>
+啊喂。。。所以咱的pelican Makefile是注释了CLEAN的。。。</p>
+<p>这样折腾下来感觉也没学到啥。。。看起来好像不务正业的。。。但是正业是啥？谁定义的？什么口味的？
+所以咱爱咋咋地～不服憋着，憋不了的过来，让狼咬一口
+<img src="https://c1.staticflickr.com/1/699/33016295172_acc40b6c17_o.png" width="512" height="291" alt="eat"></p>
+                    </div>
+                </div>
 
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
-        <div>
-            <abbr class="published" title="2017-03-01T00:00:00+08:00"> 三 01 三月 2017 </abbr>
-            <!--
-            <address class="vcard author">By
-                Sherlock Holo
-            </address>
-            -->
-        </div>
-    </div>
-</div>
+                <nav class="m-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
 
-<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"><a href="/hello-world.html" rel="bookmark" title="Permalink to Hello World">Hello World</a></h3>
-    </div>
-    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-      <h1>Hello World(wolf?)</h1>
-<p>这其实是这个博客的第一篇文章才对。。。</p>
-<p>其实一开始想用的是hexo，但是装主题时各种就死活装不上，一气之下换用pelican，而且pelican是python做的😋，这样就可以顺便熟悉python了(其实并没有)</p>
-<p>狼狼的博客也是用pelican做的但是看起来比咱的好看多了QAQ</p>
-<p>总之现在咱也算是有了博客的人(wolf)了😋</p>
-<p>就酱，咱的博客算是开张了(喂这各种东西没填耶)😋</p>
-    </div>
-
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
-        <div>
-            <abbr class="published" title="2017-02-28T00:00:00+08:00"> 二 28 二月 2017 </abbr>
-            <!--
-            <address class="vcard author">By
-                Sherlock Holo
-            </address>
-            -->
-        </div>
-    </div>
-</div>
-
-<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"><a href="/dui-bi-te-de-ren-shi.html" rel="bookmark" title="Permalink to 对比特的认识">对比特的认识</a></h3>
-    </div>
-    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-      <p><a href="https://zh.wikipedia.org/wiki/%E7%A0%81%E7%8E%87%E5%8D%95%E4%BD%8D#b_.E4.B8.8E_B">#Wiki b 与 B</a></p>
-<p>看了这个后，终于知道了最正确的写法了:</p>
-<blockquote>
-<p>b 代表 bit（比特），B 代表 byte（字节），1 字节 即 8 比特。这会导致混淆。比如当“1M（1 Meg，1 兆）网络连接”字样出现在广告上时，它常常表示 1 Mib/s（mebibit per second，二进制兆比特每秒）或者 1.049 Mb/s（megabit per second，兆比特每秒），即可能达到的最大下载速度实际上仅为 128 KiB/s（kibibyte …</p></blockquote>
-    </div>
-
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
-        <div>
-            <abbr class="published" title="2017-02-20T00:00:00+08:00"> 一 20 二月 2017 </abbr>
-            <!--
-            <address class="vcard author">By
-                Sherlock Holo
-            </address>
-            -->
-        </div>
-    </div>
-</div>
-
-<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"><a href="/shadowsocks-libevjia-mi-fang-shi-ping-ce.html" rel="bookmark" title="Permalink to Shadowsocks-libev加密方式评测">Shadowsocks-libev加密方式评测</a></h3>
-    </div>
-    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-      <p>madeye推出了AEAD加密:<a href="https://github.com/shadowsocks/shadowsocks-libev/releases/tag/v3.0.0">github</a> 现在给上madeye给的<a href="https://gist.github.com/madeye/c046fc35e10a82154f4697fb316a7ac6">bandwidth</a>测试代码做出的测试效果</p>
-<h1>aes-256-cfb</h1>
-<blockquote>
-<p>Server listening on TCP port 8388</p>
-<p>TCP window size: 85.3 KByte (default)</p>
-<p>Client connecting to 127.0.0.1, TCP port 8387</p>
-<p>TCP window size: 3.76 MByte (default)</p>
-<p>[3] local 127.0.0.1 port 40106 connected with 127.0.0.1 …</p></blockquote>
-    </div>
-
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
-        <div>
-            <abbr class="published" title="2017-02-10T00:00:00+08:00"> 五 10 二月 2017 </abbr>
-            <!--
-            <address class="vcard author">By
-                Sherlock Holo
-            </address>
-            -->
-        </div>
-    </div>
-</div>
+                    <div class="section-spacer"></div>
+                    <a href= "devhoro.html" class="m-nav__button">
+                        Older
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        <div class="mdl-layout__obfuscator"></div>
 
 
-<!-- </section> /#content -->
-<!--
-</div>
-</main>
--->
-</div>
 
        <footer class="mdl-mini-footer">
          <div class="mdl-mini-footer__right-section">
