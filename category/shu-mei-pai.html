@@ -121,7 +121,7 @@
                         <div class="cat_links">
                               <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/devhoro.html">dev.horo</a>
                               <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/food-or-friends.html">food or friends</a>
-                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/raspberry-pi.html">Raspberry Pi</a>
+                              <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/shu-mei-pai.html">树莓派</a>
                               <a class="mdl-color-text--accent mdl-button mdl-js-button" href="/category/za-tan.html">杂谈</a>
                         </div>
                 </div>
@@ -135,65 +135,109 @@
       </div>
       <main class="mblog mdl-layout__content">
 
+<!--
+<div class="mblog mdl-layout mdl-js-layout">
+<main class="mdl-layout__content">
 <div class="mblog__posts mdl-grid">
-<div class="mdl-card mdl-cell mdl-cell--12-col">
+-->
+
+<div class="mblog__posts mdl-grid">
+
+<div class="cat_title mdl-cell mdl-cell--12-col mdl-color--primary">
+<div> <h2 class="mdl-color-text--white"> 树莓派 </h2> </div>
+</div>
+
+<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
     <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
-        <h3 class="entry-title"> All articles </h3>
+        <h3 class="entry-title"><a href="/shu-mei-pai-zhi-sambaan-zhuang.html" rel="bookmark" title="Permalink to 树莓派之samba安装">树莓派之samba安装</a></h3>
     </div>
     <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <div class="archive_link">
-          <a href="/devhoro.html">/dev/horo</a>
-          </div>
-          <div class="archive_date">
-               二 28 二月 2017
-          </div>
-          <div class="archive_link">
-          <a href="/food-or-friends.html">food or friends?</a>
-          </div>
-          <div class="archive_date">
-               二 28 二月 2017
-          </div>
-          <div class="archive_link">
-          <a href="/hello-world.html">Hello World</a>
-          </div>
-          <div class="archive_date">
-               二 28 二月 2017
-          </div>
-          <div class="archive_link">
-          <a href="/dui-bi-te-de-ren-shi.html">对比特的认识</a>
-          </div>
-          <div class="archive_date">
-               一 20 二月 2017
-          </div>
-          <div class="archive_link">
-          <a href="/shadowsocks-libevjia-mi-fang-shi-ping-ce.html">Shadowsocks-libev加密方式评测</a>
-          </div>
-          <div class="archive_date">
-               五 10 二月 2017
-          </div>
-          <div class="archive_link">
-          <a href="/shu-mei-pai-zhi-sambaan-zhuang.html">树莓派之samba安装</a>
-          </div>
-          <div class="archive_date">
-               五 28 十月 2016
-          </div>
-          <div class="archive_link">
-          <a href="/shu-mei-pai-3bde-she-zhi-yu-an-zhuang.html">树莓派3B的设置与安装</a>
-          </div>
-          <div class="archive_date">
-               一 24 十月 2016
-          </div>
+      <h1>前言</h1>
+<p>本文是根据网上一大堆教程和结合了<a href="http://projpi.com/diy-home-projects-with-a-raspberry-pi/raspberry-pi-samba-share-in-5-minutes/">RASPBERRY PI SAMBA SHARE IN 5 MINUTES</a>。为什么不写其他教程的地址呢？第一：他们都没让咱的samba安装成功；第二：太多了都不记得是哪个了。。。</p>
+<h1>安装</h1>
+<p>首先得更新系统吧，咱有个习惯就是安装东西之前更新一下系统。那么在树莓派之下就是：</p>
+<div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get dist-upgrade
+</pre></div>
 
+
+<p>这里不推荐使用apt，因为咱开启了自动补全但是apt没有反应所以觉得可能apt在树莓派上可能有问题。。。吧～～</p>
+<p>那么，就下载安装吧～～</p>
+<div class="highlight"><pre><span></span>apt-get install samba samba-common-bin
+</pre></div>
+
+
+<p>然后去喝杯咖啡，等待安装。</p>
+<h1>配置</h1>
+<p>有很多人都教咱，配置文件修改前要备份，程序不确定的最好不要卸载，禁用算了～所以备份配置文件吧:</p>
+<div class="highlight"><pre><span></span>sudo cp /etc/samba/smb.conf /etc/samba/smbconf …</pre></div>
+    </div>
+
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
+        <div>
+            <abbr class="published" title="2016-10-28T00:00:00+08:00"> 五 28 十月 2016 </abbr>
+            <!--
+            <address class="vcard author">By
+                Sherlock Holo
+            </address>
+            -->
+        </div>
     </div>
 </div>
+
+<div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__title mdl-color-text--grey-50 mdl-color--primary">
+        <h3 class="entry-title"><a href="/shu-mei-pai-3bde-she-zhi-yu-an-zhuang.html" rel="bookmark" title="Permalink to 树莓派3B的设置与安装">树莓派3B的设置与安装</a></h3>
+    </div>
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <h1>树莓派通电检查</h1>
+<p>树莓派在没有插入TF卡的时候通电，如果红灯亮了并且可以持续亮着而不是闪烁，就证明硬件是没问题的。</p>
+<h1>树莓派镜像写入</h1>
+<p>一开始的时候树莓派是没有系统的，需要咱们写入系统进去。那么怎么写入呢？咱推荐在windows下写入，用Win32DiskImager写入镜像。哦对了，树莓派买的时候默认没有TF卡的，所以需要自己买TF卡。</p>
+<h6>~~不推荐8G以下的卡，因为许多人踩坑了，官方的Raspbian，即使是LITE版也无法正常刷进去~~ 其实如果是Arch的话完全没问题</h6>
+<h6>~~推荐使用Raspbian，因为这是官方推荐的系统，当然了ubuntu和Arch也是可以的。不过Arch Linux armf也是需要像x86那样命令行安装，还要手动配置网络，对于咱这样的在学校网的人还是算了吧。~~ 现在已经给树莓派上了Arch了</h6>
+<h1>镜像的配置</h1>
+<p>刚刚刷完系统后，还需要配置。因为树莓派是没有BIOS这玩意的，所以大部分配置都在TF卡的boot分区的config.txt里面配置。</p>
+<p>这里咱直接用了某宝上给的pdf说明文件的配置方法。</p>
+<blockquote>
+<p><code>hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=16
+hdmi_drive=2
+config_hdmi_boost=4
+arm_freq=800
+sdtv_mode=2</code></p>
+</blockquote>
+<h1>开机</h1>
+<p>配置好之后就可以插入树莓派开机了 …</p>
+    </div>
+
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+        <div class="minilogo" style="background-image: url(https://c1.staticflickr.com/1/603/33164043315_e7e630d5fc_m.jpg)"></div>
+        <div>
+            <abbr class="published" title="2016-10-24T00:00:00+08:00"> 一 24 十月 2016 </abbr>
+            <!--
+            <address class="vcard author">By
+                Sherlock Holo
+            </address>
+            -->
+        </div>
+    </div>
 </div>
 
+
+<!-- </section> /#content -->
+<!--
+</div>
+</main>
+-->
+</div>
 
        <footer class="mdl-mini-footer">
          <div class="mdl-mini-footer__right-section">
                <div id="about">
-                夏洛克狼用 <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> 和 <a href="http://getpelican.com">Pelican</a> 做了这个博客😋。
-              </a><br />除非另有说明，本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                夏洛克狼用 <a href="https://github.com/eswarm/materialistic-pelican">Materialistic Pelican</a> 和 <a href="http://getpelican.com">Pelican</a> 做了这个博客😋.
                </div>
          </div>
        </footer>
