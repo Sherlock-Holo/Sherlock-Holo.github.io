@@ -2,11 +2,14 @@
 <html lang="zh">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>夏洛克狼的传记 - 杂谈</title>
+        <title>Hello World(wolf?)</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/theme/bower_components/materialize/dist/css/materialize.min.css">
         <link rel="stylesheet" href="/theme/css/pygment.css">
         <link rel="stylesheet" href="/theme/css/style.css">
+
+
+
     </head>
 
     <body>
@@ -38,74 +41,34 @@
 
         <main>
         <div class="container">
-
-<div class="row">
-    <div class="card">
-        <div class="card-content flow-text">
-            <h2><a class="orange-text" href="/zhe-teng-bo-ke-de-gan-xiang.html">折腾博客的感想</a></h2>
-            <div><p>折腾了一两天博客的感想</p></div>
-        </div>
-        <div class="card-action">
-            <a href="/zhe-teng-bo-ke-de-gan-xiang.html">Lire</a>
-            <span class="right">
-                <i class="mdi-action-label-outline" title="tags"> </i>
-            </span>
-        </div>
-    </div>
-</div><div class="row">
-    <div class="card">
-        <div class="card-content flow-text">
-            <h2><a class="orange-text" href="/hello-worldwolf.html">Hello World(wolf?)</a></h2>
-            <div><p>这其实是这个博客的第一篇文章才对。。。</p>
+<article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name"><a href="/hello-worldwolf.html" rel="bookmark"
+                                                  class="orange-text"
+                                                  title="Permalink vers Hello World(wolf?)">
+            Hello World(wolf?)
+        </a>
+    </h1>
+    <div class="flow-text section" itemprop="text">
+        <p>这其实是这个博客的第一篇文章才对。。。</p>
 <p>其实一开始想用的是hexo，但是装主题时各种就死活装不上，一气之下换用pelican，而且pelican是python做的😋，这样就可以顺便熟悉python了(其实并没有)</p>
 <p>狼狼的博客也是用pelican做的但是看起来比咱的好看多了QAQ</p>
 <p>总之现在咱也算是有了博客的人(wolf)了😋</p>
-<p>就酱，咱的博客算是开张了(喂这各种东西没填耶)😋</p></div>
+<p>就酱，咱的博客算是开张了(喂这各种东西没填耶)😋</p>
+    </div>
+    <div class="divider"></div>
+    <div class="row article-details">
+        <div class="col m4 s12">
+            <i class="mdi-action-event" title="Date de publication"> <time datetime="2017-02-28" itemprop="dateCreated">二 28 二月 2017</time></i>
         </div>
-        <div class="card-action">
-            <a href="/hello-worldwolf.html">Lire</a>
-            <span class="right">
-                <i class="mdi-action-label-outline" title="tags"> </i>
-            </span>
+        <div class="col m4 s12">
+            <i class="mdi-action-list" title="Catégorie"> <a href="/category/za-tan.html">杂谈</a></i>
+        </div>
+        <div class="col m4 s12">
+            <i class="mdi-action-label" title="tags"> </i>
         </div>
     </div>
-</div><div class="row">
-    <div class="card">
-        <div class="card-content flow-text">
-            <h2><a class="orange-text" href="/dui-bi-te-de-ren-shi.html">对比特的认识</a></h2>
-            <div><p><a href="https://zh.wikipedia.org/wiki/%E7%A0%81%E7%8E%87%E5%8D%95%E4%BD%8D#b_.E4.B8.8E_B">#Wiki b 与 B</a></p>
-<p>看了这个后，终于知道了最正确的写法了:</p>
-<blockquote>
-<p>b 代表 bit（比特），B 代表 byte（字节），1 字节 即 8 比特。这会导致混淆。比如当“1M（1 Meg，1 兆）网络连接”字样出现在广告上时，它常常表示 1 Mib/s（mebibit per second，二进制兆比特每秒）或者 1.049 Mb/s（megabit per second，兆比特每秒），即可能达到的最大下载速度实际上仅为 128 KiB/s（kibibyte …</p></blockquote></div>
+</article>
         </div>
-        <div class="card-action">
-            <a href="/dui-bi-te-de-ren-shi.html">Lire</a>
-            <span class="right">
-                <i class="mdi-action-label-outline" title="tags"> </i>
-            </span>
-        </div>
-    </div>
-</div><div class="row">
-    <div class="card">
-        <div class="card-content flow-text">
-            <h2><a class="orange-text" href="/shadowsocks-libevjia-mi-fang-shi-ping-ce.html">Shadowsocks-libev加密方式评测</a></h2>
-            <div><p>madeye推出了AEAD加密:<a href="https://github.com/shadowsocks/shadowsocks-libev/releases/tag/v3.0.0">github</a> 现在给上madeye给的<a href="https://gist.github.com/madeye/c046fc35e10a82154f4697fb316a7ac6">bandwidth</a>测试代码做出的测试效果</p>
-<h1>aes-256-cfb</h1>
-<blockquote>
-<p>Server listening on TCP port 8388</p>
-<p>TCP window size: 85.3 KByte (default)</p>
-<p>Client connecting to 127.0.0.1, TCP port 8387</p>
-<p>TCP window size: 3.76 MByte (default)</p>
-<p>[3] local 127.0.0.1 port 40106 connected with 127.0.0.1 …</p></blockquote></div>
-        </div>
-        <div class="card-action">
-            <a href="/shadowsocks-libevjia-mi-fang-shi-ping-ce.html">Lire</a>
-            <span class="right">
-                <i class="mdi-action-label-outline" title="tags"> </i>
-            </span>
-        </div>
-    </div>
-</div>        </div>
         </main>
 
         <footer class="page-footer grey darken-4">
