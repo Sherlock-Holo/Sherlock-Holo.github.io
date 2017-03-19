@@ -2,11 +2,15 @@
 <html lang="zh">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>夏洛克狼 - computer science</title>
+        <title>VLAN</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/theme/bower_components/materialize/dist/css/materialize.min.css">
         <link rel="stylesheet" href="/theme/css/pygment.css">
         <link rel="stylesheet" href="/theme/css/style.css">
+
+
+
+<meta name="tags" contents="openwrt" />
     </head>
 
     <body>
@@ -16,10 +20,10 @@
                     <a href="" class="brand-logo">夏洛克狼</a>
                     <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                     <ul id="dropdown" class="dropdown-content">
-                        <li class="active"><a class="truncate" href="/category/computer-science.html">computer science</a></li>
+                        <li><a class="truncate" href="/category/computer-science.html">computer science</a></li>
                         <li><a class="truncate" href="/category/devhoro.html">dev.horo</a></li>
                         <li><a class="truncate" href="/category/food-or-friends.html">food or friends</a></li>
-                        <li><a class="truncate" href="/category/openwrt.html">openwrt</a></li>
+                        <li class="active"><a class="truncate" href="/category/openwrt.html">openwrt</a></li>
                         <li><a class="truncate" href="/category/raspberry-pi.html">Raspberry Pi</a></li>
                         <li><a class="truncate" href="/category/za-tan.html">杂谈</a></li>
                     </ul>
@@ -28,10 +32,10 @@
                         <li><a href="/archives.html">Archives</a></li>
                     </ul>
                     <ul id="mobile-nav" class="side-nav">
-                        <li class="active"><a href="/category/computer-science.html">computer science</a></li>
+                        <li><a href="/category/computer-science.html">computer science</a></li>
                         <li><a href="/category/devhoro.html">dev.horo</a></li>
                         <li><a href="/category/food-or-friends.html">food or friends</a></li>
-                        <li><a href="/category/openwrt.html">openwrt</a></li>
+                        <li class="active"><a href="/category/openwrt.html">openwrt</a></li>
                         <li><a href="/category/raspberry-pi.html">Raspberry Pi</a></li>
                         <li><a href="/category/za-tan.html">杂谈</a></li>
                         <li><a href="/archives.html">Archives</a></li>
@@ -42,22 +46,39 @@
 
         <main>
         <div class="container">
-
-<div class="row">
-    <div class="card">
-        <div class="card-content flow-text">
-            <h2><a class="orange-text" href="/xia-nuo-jiang-tui-jian-de-shu.html">夏娜酱推荐的书</a></h2>
-            <div><p>研究计算机底层的好书</p></div>
-        </div>
-        <div class="card-action">
-            <a href="/xia-nuo-jiang-tui-jian-de-shu.html">Lire</a>
-            <span class="right">
-                <i class="mdi-action-label-outline" title="tags"> </i>
-                <a href="/tag/cs.html">CS</a>
-            </span>
-        </div>
+<article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name"><a href="/vlan.html" rel="bookmark"
+                                                  class="orange-text"
+                                                  title="Permalink vers VLAN">
+            VLAN
+        </a>
+    </h1>
+    <div class="flow-text section" itemprop="text">
+        <h2>关</h2>
+<p>这个分组不使用这个接口</p>
+<h2>关联</h2>
+<p>这个就扣需要通过VLAN  ID来访问这个分组，端口之间通信无二层交换，而是冲突广播</p>
+<h2>不关联</h2>
+<p>这个接口被直接桥接到这个分组，即该端口作为本VLAN成员，进行二层交换</p>
+<h1>路由器上的VLAN</h1>
+<p><img src="https://c2.staticflickr.com/4/3847/33375953332_49885c906e_o.png" width="1024" height="303"></p>
+<p>2看起来像是eth0.2，也就是wan的</p>
+<p>1看起来像是eth0.1，也就是lan的</p>
     </div>
-</div>        </div>
+    <div class="divider"></div>
+    <div class="row article-details">
+        <div class="col m4 s12">
+            <i class="mdi-action-event" title="Date de publication"> <time datetime="2017-03-20" itemprop="dateCreated">一 20 三月 2017</time></i>
+        </div>
+        <div class="col m4 s12">
+            <i class="mdi-action-list" title="Catégorie"> <a href="/category/openwrt.html">openwrt</a></i>
+        </div>
+        <div class="col m4 s12">
+            <i class="mdi-action-label" title="tags"> </i>
+            <a href="/tag/openwrt.html">openwrt</a>        </div>
+    </div>
+</article>
+        </div>
         </main>
 
         <footer class="page-footer grey darken-4">
