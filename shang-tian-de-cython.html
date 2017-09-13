@@ -2,7 +2,7 @@
 <html lang="zh">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>Hello World(wolf?)</title>
+        <title>上天的Cython</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/theme/bower_components/materialize/dist/css/materialize.min.css">
         <link rel="stylesheet" href="/theme/css/pygment.css">
@@ -10,6 +10,7 @@
 
 
 
+<meta name="tags" contents="Python" />
     </head>
 
     <body>
@@ -23,9 +24,9 @@
                         <li><a class="truncate" href="/category/devhoro.html">dev.horo</a></li>
                         <li><a class="truncate" href="/category/food-or-friends.html">food or friends</a></li>
                         <li><a class="truncate" href="/category/openwrt.html">openwrt</a></li>
-                        <li><a class="truncate" href="/category/python.html">python</a></li>
+                        <li class="active"><a class="truncate" href="/category/python.html">python</a></li>
                         <li><a class="truncate" href="/category/raspberry-pi.html">Raspberry Pi</a></li>
-                        <li class="active"><a class="truncate" href="/category/za-tan.html">杂谈</a></li>
+                        <li><a class="truncate" href="/category/za-tan.html">杂谈</a></li>
                     </ul>
                     <ul class="right hide-on-med-and-down">
                         <li><a class="dropdown-button" href="#!" data-activates="dropdown">Catégories<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
@@ -36,9 +37,9 @@
                         <li><a href="/category/devhoro.html">dev.horo</a></li>
                         <li><a href="/category/food-or-friends.html">food or friends</a></li>
                         <li><a href="/category/openwrt.html">openwrt</a></li>
-                        <li><a href="/category/python.html">python</a></li>
+                        <li class="active"><a href="/category/python.html">python</a></li>
                         <li><a href="/category/raspberry-pi.html">Raspberry Pi</a></li>
-                        <li class="active"><a href="/category/za-tan.html">杂谈</a></li>
+                        <li><a href="/category/za-tan.html">杂谈</a></li>
                         <li><a href="/archives.html">Archives</a></li>
                     </ul>
                 </div>
@@ -48,30 +49,39 @@
         <main>
         <div class="container">
 <article itemscope itemtype="http://schema.org/Article">
-    <h1 itemprop="name"><a href="/hello-worldwolf.html" rel="bookmark"
+    <h1 itemprop="name"><a href="/shang-tian-de-cython.html" rel="bookmark"
                                                   class="orange-text"
-                                                  title="Permalink vers Hello World(wolf?)">
-            Hello World(wolf?)
+                                                  title="Permalink vers 上天的Cython">
+            上天的Cython
         </a>
     </h1>
     <div class="flow-text section" itemprop="text">
-        <p>这其实是这个博客的第一篇文章才对。。。</p>
-<p>其实一开始想用的是hexo，但是装主题时各种就死活装不上，一气之下换用pelican，而且pelican是python做的😋，这样就可以顺便熟悉python了(其实并没有)</p>
-<p>狼狼的博客也是用pelican做的但是看起来比咱的好看多了QAQ</p>
-<p>总之现在咱也算是有了博客的人(wolf)了😋</p>
-<p>就酱，咱的博客算是开张了(喂这各种东西没填耶)😋</p>
+        <p>有个东西叫做<code>uvloop</code>, 使用了cython，最初以为用cython要写很多c代码所以不怎么在意这玩意。</p>
+<p>然后今晚突发奇想: cython能不能编译原生python代码? 于是随手搜了一下，看到一个<a href="https://moonlet.gitbooks.io/cython-document-zh_cn/content/ch1-basic_tutorial.html">Cython 的基础</a>。</p>
+<p>What??? 还真能编译??!! 这就上天了。立马测试了一下<code>print('test')</code>，然后写了个<code>setup.py</code></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">Cython.Build</span> <span class="kn">import</span> <span class="n">cythonize</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">ext_modules</span><span class="o">=</span><span class="n">cythonize</span><span class="p">(</span><span class="s1">&#39;cp.pyx&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>测试了一下: <code>python setup.py build_ext</code>，进去python console，<code>import cp</code>，还真成功了。</p>
+<p>这。。。是不是意味着。。。用python写了CPU密集的东西后用cython编译一下就可以让性能有所提高? 想想都有点兴奋呢~</p>
     </div>
     <div class="divider"></div>
     <div class="row article-details">
         <div class="col m4 s12">
-            <i class="mdi-action-event" title="Date de publication"> <time datetime="2017-02-28" itemprop="dateCreated">二 28 二月 2017</time></i>
+            <i class="mdi-action-event" title="Date de publication"> <time datetime="2017-09-13" itemprop="dateCreated">三 13 九月 2017</time></i>
         </div>
         <div class="col m4 s12">
-            <i class="mdi-action-list" title="Catégorie"> <a href="/category/za-tan.html">杂谈</a></i>
+            <i class="mdi-action-list" title="Catégorie"> <a href="/category/python.html">python</a></i>
         </div>
         <div class="col m4 s12">
             <i class="mdi-action-label" title="tags"> </i>
-        </div>
+            <a href="/tag/python.html">Python</a>        </div>
     </div>
 </article>
         </div>
