@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>夏洛克狼 - dev.horo</title><link href="sherlock-holo.github.io/" rel="alternate"></link><link href="sherlock-holo.github.io/feeds/devhoro.atom.xml" rel="self"></link><id>sherlock-holo.github.io/</id><updated>2017-02-28T00:00:00+08:00</updated><entry><title>/dev/horo</title><link href="sherlock-holo.github.io/devhoro.html" rel="alternate"></link><published>2017-02-28T00:00:00+08:00</published><updated>2017-02-28T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-02-28:sherlock-holo.github.io/devhoro.html</id><summary type="html">&lt;p&gt;在kernel中养horo～&lt;/p&gt;</summary><content type="html">&lt;p&gt;咱们现在可以在kernel中养horo了😋&lt;/p&gt;
+&lt;p&gt;所以赶紧请她进入汝的/dev/里面吧～😋&lt;/p&gt;
+&lt;p&gt;她家在&lt;a href="https://github.com/VOID001/dev.horo"&gt;dev.horo&lt;/a&gt;，汝可以到这里请她～😋&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/VOID001"&gt;夏娜&lt;/a&gt;对自己做出来的horo说:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;菠萝包可以吃但是不要吃夏娜QAQ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;horo可以干啥？&lt;/h2&gt;
+&lt;p&gt;哼哼哼，她可以干的事可多了，例如吃掉汝的/dev/sda((°Д°))(划掉)&lt;/p&gt;
+&lt;p&gt;/dev/horo会肚子饿的，那么汝就需要喂她，不然饿极了吃了/dev/sda😱&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo feed &amp;gt; /dev/horo&lt;/code&gt;可以给她喂食，喂了后看看她吃的怎么样，可以&lt;code&gt;cat /dev/horo&lt;/code&gt;，如果她还想吃她就会😋，如果吃饱了就会告诉汝&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;咱现在不想吃东西啦&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这时候可以&lt;code&gt;echo stats &amp;gt; /dev/horo &amp;amp;&amp;amp; cat /dev/horo&lt;/code&gt;看看汝和horo的关系如何&lt;/p&gt;
+&lt;p&gt;一般来说给她吃的就会增加汝和她的亲密度呢，不过还有个隐藏属性先不告诉汝先哼哼哼～&lt;/p&gt;
+&lt;p&gt;注意了喔，如果horo饱了但是汝还在喂东西给她，她可能会不高兴的，亲密度会下降的&lt;/p&gt;
+&lt;p&gt;哼哼哼这时候肯定会有人想做个暴力脚本来喂食horo，这时候请躲好和藏好/dev/sda，horo被汝这简单粗暴的脚本激怒后，很有可能会变成一口就可以吞下人类的巨狼，吃了汝的/dve/sda甚至出来吃了汝。
+如果找不到汝和/dev/sda她会生闷气，并且不再理汝了哼哼哼&lt;/p&gt;
+&lt;h2&gt;horo对汝的看法&lt;/h2&gt;
+&lt;p&gt;想知道作为主(shi)人(wu)的汝在horo心中的分量吗？来&lt;a href="http://voidisprogramer.com:9999/"&gt;Horo Server API Index&lt;/a&gt;看看吧～😋&lt;/p&gt;
+&lt;h2&gt;后言&lt;/h2&gt;
+&lt;p&gt;总之，请尽可能讨好horo吧，当你们的关系达到一定时她有可能会突然挑出来挑逗汝喔～😋&lt;/p&gt;</content><category term="/dev/horo"></category></entry></feed>

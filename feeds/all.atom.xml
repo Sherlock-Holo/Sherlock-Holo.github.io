@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>夏洛克狼</title><link href="sherlock-holo.github.io/" rel="alternate"></link><link href="sherlock-holo.github.io/feeds/all.atom.xml" rel="self"></link><id>sherlock-holo.github.io/</id><updated>2017-09-13T00:00:00+08:00</updated><entry><title>上天的Cython</title><link href="sherlock-holo.github.io/shang-tian-de-cython.html" rel="alternate"></link><published>2017-09-13T00:00:00+08:00</published><updated>2017-09-13T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-09-13:sherlock-holo.github.io/shang-tian-de-cython.html</id><summary type="html">&lt;p&gt;了解到Cython&lt;/p&gt;</summary><content type="html">&lt;p&gt;有个东西叫做&lt;code&gt;uvloop&lt;/code&gt;, 他使用cython编写，是为了提高asyncio的性能，而咱最初以为用cython要写很多c代码，所以并不怎么在意这玩意。&lt;/p&gt;
+&lt;p&gt;然后今晚突发奇想: cython能不能编译纯python代码? 于是随手搜了一下，看到一个&lt;a href="https://moonlet.gitbooks.io/cython-document-zh_cn/content/ch1-basic_tutorial.html"&gt;Cython 的基础&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;What??? 还真能编译??!! 这就上天了。立马测试了一下&lt;code&gt;print('test')&lt;/code&gt;，然后写了个&lt;code&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Cython.Build&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cythonize&lt;/span&gt;
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;ext_modules&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cythonize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cp.pyx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;测试了一下: &lt;code&gt;python setup.py build_ext&lt;/code&gt;，进去python console，&lt;code&gt;import cp&lt;/code&gt;，还真成功了。&lt;/p&gt;
+&lt;p&gt;这。。。是不是意味着。。。用python写了CPU密集的东西后用cython编译一下就可以让性能有所提高? 想想都有点兴奋呢~&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>food or friends?</title><link href="sherlock-holo.github.io/food-or-friends.html" rel="alternate"></link><published>2017-04-23T00:00:00+08:00</published><updated>2017-04-23T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-04-23:sherlock-holo.github.io/food-or-friends.html</id><summary type="html">&lt;p&gt;夏洛克狼的朋友们～&lt;/p&gt;</summary><content type="html">&lt;p&gt;咱的朋友有很多的喔～&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/4/3824/33126014016_79b60b8320_t.jpg" width="80" height="80" alt="96ebe2cbc5e2a21062204b8ce2153db2"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://farseerfc.me/"&gt;farseerfc&lt;/a&gt; 爱呼吸酱可是在日本的(博士生or)助教?，Arch Linux TU之一，同时拥有#archlinux-cn很多人都没有的名为老婆的人生赢家&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/4/3693/33011063142_d37b744274_t.jpg" width="80" height="80" alt="3e3c1cb94b9ad3551cd9d43f2e52e105"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://lilydjwg.is-programmer.com/"&gt;lilydjwg 依云&lt;/a&gt; 百合仙子～&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/1/716/33011063182_959f58ab5c_o.jpg" width="80" height="80" alt="6858fa3f1506758186d280c47d83ec77"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.felixc.at/"&gt;felixonmars&lt;/a&gt; 肥猫！可爱的肥猫！好想咬一口～😋&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/1/730/33011063342_64086a27ce_t.jpg" width="80" height="80" alt="6134883"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://voidisprogramer.com/"&gt;VOID{001}&lt;/a&gt; 夏娜酱～傲娇的夏娜酱～身上散发着菠萝包香味，偶尔会带一点辣味😋&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://c1.staticflickr.com/4/3695/33011063402_8e95b3fd1d_t.jpg" width="80" height="80" alt="c1ed925b78c6b65d0abc61b5b29b0289"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://fiveyellowmice.com/"&gt;FiveYellowMice&lt;/a&gt; 江湖人称‘五黄🐭’，但究竟是什么物种没人知道因为TA有时候会变成了’五黄狼’😱&lt;/p&gt;</content></entry><entry><title>VLAN</title><link href="sherlock-holo.github.io/vlan.html" rel="alternate"></link><published>2017-03-20T00:00:00+08:00</published><updated>2017-03-20T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-03-20:sherlock-holo.github.io/vlan.html</id><summary type="html">&lt;p&gt;openwrt的VLAN&lt;/p&gt;</summary><content type="html">&lt;h2&gt;关&lt;/h2&gt;
+&lt;p&gt;这个分组不使用这个接口&lt;/p&gt;
+&lt;h2&gt;关联&lt;/h2&gt;
+&lt;p&gt;这个就扣需要通过VLAN  ID来访问这个分组，端口之间通信无二层交换，而是冲突广播&lt;/p&gt;
+&lt;h2&gt;不关联&lt;/h2&gt;
+&lt;p&gt;这个接口被直接桥接到这个分组，即该端口作为本VLAN成员，进行二层交换&lt;/p&gt;
+&lt;h1&gt;路由器上的VLAN&lt;/h1&gt;
+&lt;p&gt;&lt;img src="https://c2.staticflickr.com/4/3847/33375953332_49885c906e_o.png" width="1024" height="303"&gt;&lt;/p&gt;
+&lt;p&gt;2看起来像是eth0.2，也就是wan的&lt;/p&gt;
+&lt;p&gt;1看起来像是eth0.1，也就是lan的&lt;/p&gt;</content><category term="openwrt"></category></entry><entry><title>夏娜酱推荐的书</title><link href="sherlock-holo.github.io/xia-nuo-jiang-tui-jian-de-shu.html" rel="alternate"></link><published>2017-03-04T00:00:00+08:00</published><updated>2017-03-04T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-03-04:sherlock-holo.github.io/xia-nuo-jiang-tui-jian-de-shu.html</id><summary type="html">&lt;p&gt;研究计算机底层的好书&lt;/p&gt;</summary><content type="html">&lt;p&gt;先mark着先，夏娜酱给的书名都是研究底层的好书😋&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSAPP&lt;/li&gt;
+&lt;li&gt;LDD&lt;/li&gt;
+&lt;li&gt;ULK&lt;/li&gt;
+&lt;li&gt;UNP&lt;/li&gt;
+&lt;li&gt;APUE&lt;/li&gt;
+&lt;li&gt;TCP/IP&lt;/li&gt;
+&lt;li&gt;Intel Manual&lt;/li&gt;
+&lt;li&gt;Operating System&lt;/li&gt;
+&lt;/ul&gt;</content><category term="CS"></category></entry><entry><title>折腾博客的感想</title><link href="sherlock-holo.github.io/zhe-teng-bo-ke-de-gan-xiang.html" rel="alternate"></link><published>2017-03-01T00:00:00+08:00</published><updated>2017-03-01T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-03-01:sherlock-holo.github.io/zhe-teng-bo-ke-de-gan-xiang.html</id><summary type="html">&lt;p&gt;折腾了一两天博客的感想&lt;/p&gt;</summary><content type="html">&lt;p&gt;不知不觉已经到了3月1号呀，都不知道2月怎么突然就没了的。。。&lt;/p&gt;
+&lt;p&gt;在27号晚上决定折腾个博客玩玩，因为夏娜酱和狼狼都有，这次终于没忍住，开始了漫长(本当に?)的建立博客之路了&lt;/p&gt;
+&lt;p&gt;一开始上网看到hexo比较简单，而且官方有中文指引，觉得不错就开始使用hexo，但是。。。&lt;/p&gt;
+&lt;p&gt;这无法使用material主题是闹哪样嗷呜！默认主题还过得去但是咱不喜欢呀，而material主题又用不了，一气之下
+咱就改为了使用pelican&lt;/p&gt;
+&lt;p&gt;不知道哪来的记忆，说pelican建博客很难，但是咱那时候气在头上，&lt;code&gt;npm remove hexo*&lt;/code&gt;卸载了hexo有关的东西
+然后准备&lt;code&gt;pip install pelican&lt;/code&gt;，突然停下来，想着&lt;code&gt;yaourt pelican&lt;/code&gt;查找一下先，果然有这个包，
+于是便愉快的使用Arch自己的包管理器来负责管理pelican～&lt;/p&gt;
+&lt;p&gt;安装完后，看到狼狼的这篇&lt;a href="https://blog.yoitsu.moe/pelican/pelican_output.html"&gt;发布 Pelican 博客的几种方式&lt;/a&gt;
+可以使用&lt;code&gt;pelican-quickstart&lt;/code&gt;来快速创建，于是便运行命令&lt;/p&gt;
+&lt;p&gt;接下来看到的提示信息瞬间让咱冷静下来。。。&lt;/p&gt;
+&lt;p&gt;因为提示信息是英文的(夏洛克狼英语并不好😔)，然后有些可以直接回车有些需要输入信息。虽然说生成后可以改&lt;code&gt;pelicanconf.py&lt;/code&gt;
+但是也不能乱来，后期改起来很麻烦的。。。&lt;/p&gt;
+&lt;p&gt;一番折腾下来，博客总算在github pages上扎土生根了😋&lt;/p&gt;
+&lt;p&gt;其中折腾github发布最尴尬，因为有时候顺手mkae clean了，就会把output目录删除了。。。里面有&lt;code&gt;/git&lt;/code&gt;
+啊喂。。。所以咱的pelican Makefile是注释了CLEAN的。。。&lt;/p&gt;
+&lt;p&gt;这样折腾下来感觉也没学到啥。。。看起来好像不务正业的。。。但是正业是啥？谁定义的？什么口味的？
+所以咱爱咋咋地～不服憋着，憋不了的过来，让狼咬一口
+&lt;center&gt;&lt;img src="https://c1.staticflickr.com/1/699/33016295172_acc40b6c17_o.png" width="512" height="291" alt="eat"&gt;&lt;/center&gt;&lt;/p&gt;</content></entry><entry><title>/dev/horo</title><link href="sherlock-holo.github.io/devhoro.html" rel="alternate"></link><published>2017-02-28T00:00:00+08:00</published><updated>2017-02-28T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-02-28:sherlock-holo.github.io/devhoro.html</id><summary type="html">&lt;p&gt;在kernel中养horo～&lt;/p&gt;</summary><content type="html">&lt;p&gt;咱们现在可以在kernel中养horo了😋&lt;/p&gt;
+&lt;p&gt;所以赶紧请她进入汝的/dev/里面吧～😋&lt;/p&gt;
+&lt;p&gt;她家在&lt;a href="https://github.com/VOID001/dev.horo"&gt;dev.horo&lt;/a&gt;，汝可以到这里请她～😋&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/VOID001"&gt;夏娜&lt;/a&gt;对自己做出来的horo说:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;菠萝包可以吃但是不要吃夏娜QAQ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;horo可以干啥？&lt;/h2&gt;
+&lt;p&gt;哼哼哼，她可以干的事可多了，例如吃掉汝的/dev/sda((°Д°))(划掉)&lt;/p&gt;
+&lt;p&gt;/dev/horo会肚子饿的，那么汝就需要喂她，不然饿极了吃了/dev/sda😱&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo feed &amp;gt; /dev/horo&lt;/code&gt;可以给她喂食，喂了后看看她吃的怎么样，可以&lt;code&gt;cat /dev/horo&lt;/code&gt;，如果她还想吃她就会😋，如果吃饱了就会告诉汝&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;咱现在不想吃东西啦&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这时候可以&lt;code&gt;echo stats &amp;gt; /dev/horo &amp;amp;&amp;amp; cat /dev/horo&lt;/code&gt;看看汝和horo的关系如何&lt;/p&gt;
+&lt;p&gt;一般来说给她吃的就会增加汝和她的亲密度呢，不过还有个隐藏属性先不告诉汝先哼哼哼～&lt;/p&gt;
+&lt;p&gt;注意了喔，如果horo饱了但是汝还在喂东西给她，她可能会不高兴的，亲密度会下降的&lt;/p&gt;
+&lt;p&gt;哼哼哼这时候肯定会有人想做个暴力脚本来喂食horo，这时候请躲好和藏好/dev/sda，horo被汝这简单粗暴的脚本激怒后，很有可能会变成一口就可以吞下人类的巨狼，吃了汝的/dve/sda甚至出来吃了汝。
+如果找不到汝和/dev/sda她会生闷气，并且不再理汝了哼哼哼&lt;/p&gt;
+&lt;h2&gt;horo对汝的看法&lt;/h2&gt;
+&lt;p&gt;想知道作为主(shi)人(wu)的汝在horo心中的分量吗？来&lt;a href="http://voidisprogramer.com:9999/"&gt;Horo Server API Index&lt;/a&gt;看看吧～😋&lt;/p&gt;
+&lt;h2&gt;后言&lt;/h2&gt;
+&lt;p&gt;总之，请尽可能讨好horo吧，当你们的关系达到一定时她有可能会突然挑出来挑逗汝喔～😋&lt;/p&gt;</content><category term="/dev/horo"></category></entry><entry><title>Hello World(wolf?)</title><link href="sherlock-holo.github.io/hello-worldwolf.html" rel="alternate"></link><published>2017-02-28T00:00:00+08:00</published><updated>2017-02-28T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-02-28:sherlock-holo.github.io/hello-worldwolf.html</id><summary type="html">&lt;p&gt;这其实是这个博客的第一篇文章才对。。。&lt;/p&gt;
+&lt;p&gt;其实一开始想用的是hexo，但是装主题时各种就死活装不上，一气之下换用pelican，而且pelican是python做的😋，这样就可以顺便熟悉python了(其实并没有)&lt;/p&gt;
+&lt;p&gt;狼狼的博客也是用pelican做的但是看起来比咱的好看多了QAQ&lt;/p&gt;
+&lt;p&gt;总之现在咱也算是有了博客的人(wolf)了😋&lt;/p&gt;
+&lt;p&gt;就酱，咱的博客算是开张了(喂这各种东西没填耶)😋&lt;/p&gt;</summary><content type="html">&lt;p&gt;这其实是这个博客的第一篇文章才对。。。&lt;/p&gt;
+&lt;p&gt;其实一开始想用的是hexo，但是装主题时各种就死活装不上，一气之下换用pelican，而且pelican是python做的😋，这样就可以顺便熟悉python了(其实并没有)&lt;/p&gt;
+&lt;p&gt;狼狼的博客也是用pelican做的但是看起来比咱的好看多了QAQ&lt;/p&gt;
+&lt;p&gt;总之现在咱也算是有了博客的人(wolf)了😋&lt;/p&gt;
+&lt;p&gt;就酱，咱的博客算是开张了(喂这各种东西没填耶)😋&lt;/p&gt;</content></entry><entry><title>对比特的认识</title><link href="sherlock-holo.github.io/dui-bi-te-de-ren-shi.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-02-20:sherlock-holo.github.io/dui-bi-te-de-ren-shi.html</id><summary type="html">&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E7%A0%81%E7%8E%87%E5%8D%95%E4%BD%8D#b_.E4.B8.8E_B"&gt;#Wiki b 与 B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看了这个后，终于知道了最正确的写法了:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;b 代表 bit（比特），B 代表 byte（字节），1 字节 即 8 比特。这会导致混淆。比如当“1M（1 Meg，1 兆）网络连接”字样出现在广告上时，它常常表示 1 Mib/s（mebibit per second，二进制兆比特每秒）或者 1.049 Mb/s（megabit per second，兆比特每秒），即可能达到的最大下载速度实际上仅为 128 KiB/s（kibibyte …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E7%A0%81%E7%8E%87%E5%8D%95%E4%BD%8D#b_.E4.B8.8E_B"&gt;#Wiki b 与 B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看了这个后，终于知道了最正确的写法了:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;b 代表 bit（比特），B 代表 byte（字节），1 字节 即 8 比特。这会导致混淆。比如当“1M（1 Meg，1 兆）网络连接”字样出现在广告上时，它常常表示 1 Mib/s（mebibit per second，二进制兆比特每秒）或者 1.049 Mb/s（megabit per second，兆比特每秒），即可能达到的最大下载速度实际上仅为 128 KiB/s（kibibyte per second，二进制千字节每秒）或者 131 kB/s（kilobyte per second，千字节每秒）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那么可以说咱家里的带宽为100Mib/s，理论速度是12.5MiB/s&lt;/p&gt;</content></entry><entry><title>Shadowsocks-libev加密方式评测</title><link href="sherlock-holo.github.io/shadowsocks-libevjia-mi-fang-shi-ping-ce.html" rel="alternate"></link><published>2017-02-10T00:00:00+08:00</published><updated>2017-02-10T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-02-10:sherlock-holo.github.io/shadowsocks-libevjia-mi-fang-shi-ping-ce.html</id><summary type="html">&lt;p&gt;madeye推出了AEAD加密:&lt;a href="https://github.com/shadowsocks/shadowsocks-libev/releases/tag/v3.0.0"&gt;github&lt;/a&gt; 现在给上madeye给的&lt;a href="https://gist.github.com/madeye/c046fc35e10a82154f4697fb316a7ac6"&gt;bandwidth&lt;/a&gt;测试代码做出的测试效果&lt;/p&gt;
+&lt;h1&gt;aes-256-cfb&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;TCP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 40106 connected with 127.0.0.1 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;madeye推出了AEAD加密:&lt;a href="https://github.com/shadowsocks/shadowsocks-libev/releases/tag/v3.0.0"&gt;github&lt;/a&gt; 现在给上madeye给的&lt;a href="https://gist.github.com/madeye/c046fc35e10a82154f4697fb316a7ac6"&gt;bandwidth&lt;/a&gt;测试代码做出的测试效果&lt;/p&gt;
+&lt;h1&gt;aes-256-cfb&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;TCP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 40106 connected with 127.0.0.1 port 8387&lt;/p&gt;
+&lt;p&gt;[4] local 127.0.0.1 port 8388 connected with 127.0.0.1 port 54382&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[3] 0.0-10.0 sec 1.55 GBytes 1.33 Gbits/sec&lt;/p&gt;
+&lt;p&gt;Test Finished&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[4] 0.0-10.0 sec 1.53 GBytes 1.31 Gbits/sec&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;aes-256-gcm&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;TCP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 40154 connected with 127.0.0.1 port 8387&lt;/p&gt;
+&lt;p&gt;[4] local 127.0.0.1 port 8388 connected with 127.0.0.1 port 54430&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[3] 0.0-10.0 sec 986 MBytes 827 Mbits/sec&lt;/p&gt;
+&lt;p&gt;Test Finished&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[4] 0.0-10.0 sec 971 MBytes 813 Mbits/sec&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;chacha20-ietf&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;TCP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 40224 connected with 127.0.0.1 port 8387&lt;/p&gt;
+&lt;p&gt;[4] local 127.0.0.1 port 8388 connected with 127.0.0.1 port 54500&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[3] 0.0-10.0 sec 2.33 GBytes 2.00 Gbits/sec&lt;/p&gt;
+&lt;p&gt;Test Finished&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[4] 0.0-10.0 sec 2.32 GBytes 1.99 Gbits/sec&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;chacha20&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;TCP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 40698 connected with 127.0.0.1 port 8387&lt;/p&gt;
+&lt;p&gt;[4] local 127.0.0.1 port 8388 connected with 127.0.0.1 port 54974&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[3] 0.0-10.0 sec 2.30 GBytes 1.97 Gbits/sec&lt;/p&gt;
+&lt;p&gt;Test Finished&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[4] 0.0-10.0 sec 2.29 GBytes 1.96 Gbits/sec&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;chacha20-ietf-poly1305&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server listening on TCP port 8388&lt;/p&gt;
+&lt;p&gt;CP window size: 85.3 KByte (default)&lt;/p&gt;
+&lt;p&gt;[4] local 127.0.0.1 port 8388 connected with 127.0.0.1 port 55372&lt;/p&gt;
+&lt;p&gt;Client connecting to 127.0.0.1, TCP port 8387&lt;/p&gt;
+&lt;p&gt;TCP window size: 3.76 MByte (default)&lt;/p&gt;
+&lt;p&gt;[3] local 127.0.0.1 port 41096 connected with 127.0.0.1 port 8387&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[3] 0.0-10.0 sec 1.55 GBytes 1.33 Gbits/sec&lt;/p&gt;
+&lt;p&gt;Test Finished&lt;/p&gt;
+&lt;p&gt;[ID] Interval Transfer Bandwidth&lt;/p&gt;
+&lt;p&gt;[4] 0.0-10.0 sec 1.54 GBytes 1.32 Gbits/sec&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>树莓派之samba安装</title><link href="sherlock-holo.github.io/shu-mei-pai-zhi-sambaan-zhuang.html" rel="alternate"></link><published>2016-10-28T00:00:00+08:00</published><updated>2016-10-28T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2016-10-28:sherlock-holo.github.io/shu-mei-pai-zhi-sambaan-zhuang.html</id><summary type="html">&lt;p&gt;装完了树莓派装samba～&lt;/p&gt;</summary><content type="html">&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;本文是根据网上一大堆教程和结合了&lt;a href="http://projpi.com/diy-home-projects-with-a-raspberry-pi/raspberry-pi-samba-share-in-5-minutes/"&gt;RASPBERRY PI SAMBA SHARE IN 5 MINUTES&lt;/a&gt;。为什么不写其他教程的地址呢？第一：他们都没让咱的samba安装成功；第二：太多了都不记得是哪个了。。。&lt;/p&gt;
+&lt;h1&gt;安装&lt;/h1&gt;
+&lt;p&gt;首先得更新系统吧，咱有个习惯就是安装东西之前更新一下系统。那么在树莓派之下就是：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get update
+sudo apt-get dist-upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这里不推荐使用apt，因为咱开启了自动补全但是apt没有反应所以觉得可能apt在树莓派上可能有问题。。。吧～～&lt;/p&gt;
+&lt;p&gt;那么，就下载安装吧～～&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get install samba samba-common-bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;然后去喝杯咖啡，等待安装。&lt;/p&gt;
+&lt;h1&gt;配置&lt;/h1&gt;
+&lt;p&gt;有很多人都教咱，配置文件修改前要备份，程序不确定的最好不要卸载，禁用算了～所以备份配置文件吧:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo cp /etc/samba/smb.conf /etc/samba/smbconf.bak
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;创建samba使用的目录，专门划分一个目录给他方便管理。咱把他创建在根目录。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /
+sudo mkdir samba
+cd samba
+sudo mkdir public
+sudo mkdir Holo-Share
+sudo chmod 777 -R samba
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;设置为777权限是为了不会出现什么奇怪的问题，而为什么使用递归呢？因为咱创建了其他子目录，如果进去一个个来咱可不太喜欢。&lt;/p&gt;
+&lt;p&gt;那么接下来修改配置文件了:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Inside nano, navigate to the section [global], under workgroup = WORKGROUP, add the following line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;是不是晕了？没关系，咱会翻译成实际操作哒～～&lt;/p&gt;
+&lt;p&gt;找到[global]这里，在workgroup的下面加入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netbios name = HOBBIT&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Under Share definitions, to create a Share for user Pi, Enter the following :&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就是在Share definitions下面加入:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Holo-share]&lt;/span&gt;
+&lt;span class="na"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/samba/Holo-Share&lt;/span&gt;
+&lt;span class="na"&gt;comment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;Pi&amp;#39;s Share Folder&lt;/span&gt;
+&lt;span class="na"&gt;valid users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;pi&lt;/span&gt;
+&lt;span class="na"&gt;read only&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;No&lt;/span&gt;
+&lt;span class="na"&gt;create mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0777&lt;/span&gt;
+&lt;span class="na"&gt;directory mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0777&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看了上面英文&lt;a href="http://projpi.com/diy-home-projects-with-a-raspberry-pi/raspberry-pi-samba-share-in-5-minutes/"&gt;RASPBERRY PI SAMBA SHARE IN 5 MINUTES&lt;/a&gt;会想为什么有点出入呢？当然啦咱要有自己的风格嘛～～～&lt;/p&gt;
+&lt;p&gt;设置完私人目录后，建议设置一个公共目录出来让大家一起共享。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[PublicShare]&lt;/span&gt;
+&lt;span class="na"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/samba/public&lt;/span&gt;
+&lt;span class="na"&gt;comment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;Public Share Folder&lt;/span&gt;
+&lt;span class="na"&gt;public&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;yes&lt;/span&gt;
+&lt;span class="c1"&gt;#guest ok = yes&lt;/span&gt;
+&lt;span class="na"&gt;read only&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;No&lt;/span&gt;
+&lt;span class="na"&gt;writable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;yes&lt;/span&gt;
+&lt;span class="na"&gt;create mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0777&lt;/span&gt;
+&lt;span class="na"&gt;directory mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;0777&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这是咱自己的配置，跟教程的有点出入，用教程的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;[PublicShare]
+path = /mnt/hdd/publicshare
+comment = Public Share Folder
+guest ok = yes
+read only = No
+create mask = 0777
+directory mask = 0777&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一次成功使用，但是不知道为什么第二次进去时出现各种蜜汁错误，所以修改了一下，到现在都没事正常运行～～～&lt;/p&gt;
+&lt;p&gt;设置调好后，因为samba使用的帐号管理是自己有一套的，那么私人目录那里需要添加帐号：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo smbpasswd -a pi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后输入密码。&lt;/p&gt;
+&lt;h1&gt;启动samba&lt;/h1&gt;
+&lt;p&gt;设置完后，就可以启动了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo service samba restart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;为什么用重启呢？鬼知道～～～所有人都这么干～～～&lt;/p&gt;
+&lt;h1&gt;使用&lt;/h1&gt;
+&lt;p&gt;那么，就在windows下的资源管理器那里输入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\\x.x.x.x&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;就可以进去了。&lt;/p&gt;
+&lt;h6&gt;小提示：进去一个目录后，复制路径，然后添加网络位置，填进去，选择一个盘符给他。这样就可以在计算机里面直接看到他，不需要每次都输入地址了。&lt;/h6&gt;
+&lt;h1&gt;后言&lt;/h1&gt;
+&lt;p&gt;希望自己的教程能够帮到想安装samba的人类吧～～～&lt;/p&gt;</content><category term="树莓派"></category></entry><entry><title>树莓派3B的设置与安装</title><link href="sherlock-holo.github.io/shu-mei-pai-3bde-she-zhi-yu-an-zhuang.html" rel="alternate"></link><published>2016-10-24T00:00:00+08:00</published><updated>2016-10-24T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2016-10-24:sherlock-holo.github.io/shu-mei-pai-3bde-she-zhi-yu-an-zhuang.html</id><summary type="html">&lt;p&gt;安装树莓派的历程&lt;/p&gt;</summary><content type="html">&lt;h1&gt;树莓派通电检查&lt;/h1&gt;
+&lt;p&gt;树莓派在没有插入TF卡的时候通电，如果红灯亮了并且可以持续亮着而不是闪烁，就证明硬件是没问题的。&lt;/p&gt;
+&lt;h1&gt;树莓派镜像写入&lt;/h1&gt;
+&lt;p&gt;一开始的时候树莓派是没有系统的，需要咱们写入系统进去。那么怎么写入呢？咱推荐在windows下写入，用Win32DiskImager写入镜像。哦对了，树莓派买的时候默认没有TF卡的，所以需要自己买TF卡。&lt;/p&gt;
+&lt;h6&gt;~~不推荐8G以下的卡，因为许多人踩坑了，官方的Raspbian，即使是LITE版也无法正常刷进去~~ 其实如果是Arch的话完全没问题&lt;/h6&gt;
+&lt;h6&gt;~~推荐使用Raspbian，因为这是官方推荐的系统，当然了ubuntu和Arch也是可以的。不过Arch Linux armf也是需要像x86那样命令行安装，还要手动配置网络，对于咱这样的在学校网的人还是算了吧。~~ 现在已经给树莓派上了Arch了&lt;/h6&gt;
+&lt;h1&gt;镜像的配置&lt;/h1&gt;
+&lt;p&gt;刚刚刷完系统后，还需要配置。因为树莓派是没有BIOS这玩意的，所以大部分配置都在TF卡的boot分区的config.txt里面配置。&lt;/p&gt;
+&lt;p&gt;这里咱直接用了某宝上给的pdf说明文件的配置方法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=16
+hdmi_drive=2
+config_hdmi_boost=4
+arm_freq=800
+sdtv_mode=2&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;开机&lt;/h1&gt;
+&lt;p&gt;配置好之后就可以插入树莓派开机了。开机后会如果树莓派的绿灯亮了就代表系统成功启动了。&lt;/p&gt;
+&lt;h1&gt;连接电脑&lt;/h1&gt;
+&lt;p&gt;网传可以在cmdline.txt文件里面ip=1.2.3.4这样给他设置静止IP，不过是可以设置，但是连进交换机后不知道为什么电脑搜不到，可能是咱的树莓派傲娇了。。。不过在配置好后又可以直接在局域网里面找到并且SSH进去了。&lt;/p&gt;
+&lt;p&gt;所以咱使用了另外一种方法：共享电脑网络给树莓派用，大家一起在一个局域网里面。
+&lt;a href="http://qiita.com/CoffeeDog/items/d1ad4e53373935701b1a"&gt;无显示器使用PC远程控制树莓派方案（有线&amp;amp;无线）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://qiita-image-store.s3.amazonaws.com/0/99696/9f2a976f-d868-7e47-93aa-b27160f7e86d.png"&gt;&lt;/p&gt;
+&lt;p&gt;在这一步里，如果真的看不懂是哪个IP，就逐个ssh吧。。。咱就是这样了。。。&lt;/p&gt;
+&lt;p&gt;SSH帐号是pi,密码是raspberry。连接进去后可以通过&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo passwd root&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;来修改root的密码。&lt;/p&gt;
+&lt;h1&gt;配置&lt;/h1&gt;
+&lt;p&gt;一般来说第一次进去后会自动进入Raspi-config。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Raspi-config 是 raspbian 系统自带的调试工具,里面可以设置语言与汉化、开机自动进入桌面、WIFI 设置、摄像头开启等设置。&lt;/p&gt;
+&lt;p&gt;Expand Filesystem TF 卡扩展(一定要做不然后悔)&lt;/p&gt;
+&lt;p&gt;作用在于将 TF 卡未启用的空间启用起来(若不启用,在树莓派系统下看不到;若,本来 16G的 TF 卡,装了系统后,只能查看到 3G 左右的样子,也就是系统本身的大小。“启用”后,也就是“扩展”后,就可以看到和使用全部 16G 左右的容量了)。启用:直接敲回车,就行了。&lt;/p&gt;
+&lt;p&gt;Boot Options
+开机自动进入桌面开机进入桌面还是命令行模式&lt;/p&gt;
+&lt;p&gt;Wait for Network at Boot&lt;/p&gt;
+&lt;p&gt;表示启动的时候,是否等待连结网络。&lt;/p&gt;
+&lt;p&gt;Internationalisation Options&lt;/p&gt;
+&lt;p&gt;汉化、时区、键盘布局设置、WIFI 所属国家&lt;/p&gt;
+&lt;p&gt;其中的locale选EN_US.UTF-8 UTF-8、ZH_CN.GBK GBK、ZH_CN.UTF-8 UTF-8，为什么怎么做就不说了，跟普通linux没什么区别。&lt;/p&gt;
+&lt;p&gt;change timezone 时区设置&lt;/p&gt;
+&lt;p&gt;一般选择Asia ，shanghai。毕竟在中国。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其他的咱也没去看了，因为还没用到或者不需要管他。&lt;/p&gt;
+&lt;p&gt;连上网络后，尝试ping一下网络是否畅通，一般来说树莓派可以通过DHCP获取IP来上网。而校园网要折腾了。。。&lt;/p&gt;
+&lt;h1&gt;网络特别篇(如果是正常网络可以略过)&lt;/h1&gt;
+&lt;p&gt;像咱这样使用锐捷认证的就比较蛋疼了，需要修改MAC地址来模拟别人的电脑。&lt;/p&gt;
+&lt;p&gt;咱使用一个师姐的帐号～～～ ~~师姐有男朋友了~~&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ifconfig eth0 down
+ifconfig eth0 hw ether &lt;span class="m"&gt;00&lt;/span&gt;:00:00:00:00:00
+ifconfig eth0 up
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;修改MAC地址后就可以过锐捷的认证了。&lt;/p&gt;
+&lt;p&gt;上面的命令可以写进rc.local里面开机自动执行。&lt;/p&gt;
+&lt;p&gt;至于怎么使用mentohust来过认证以后再写一篇吧。&lt;/p&gt;
+&lt;h1&gt;系统更新&lt;/h1&gt;
+&lt;p&gt;每个人装好Linux都会第一时间更新系统吧，因为默认的东西都冻结在打包那瞬间，版本老旧很正常。&lt;/p&gt;
+&lt;p&gt;Raspbian是基于Dibian做的，那么更新系统跟Debian一样。不过国内建议改源，不然速度很慢，嗯，估计树莓派4出来了就更新完了。&lt;/p&gt;
+&lt;p&gt;换源建议使用清华大学的，学术网站的源一般都比较新。不建议使用ustc的源，据说很久没更新了。
+&lt;a href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/"&gt;清华源更换方法&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt update
+sudo apt dist-upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;接下来就是等待了。&lt;/p&gt;
+&lt;p&gt;~~更新后咱一般习惯重启一下，不知道需不需要，反正是window带来的习惯~~ 现在知道了Linux很多东西运行时都是在内存中&lt;/p&gt;
+&lt;h1&gt;使用&lt;/h1&gt;
+&lt;p&gt;到现在为止树莓派已经配置好了，可以开始折腾了啦～～～&lt;/p&gt;</content><category term="树莓派"></category></entry></feed>

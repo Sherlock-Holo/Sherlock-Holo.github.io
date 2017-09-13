@@ -56,8 +56,8 @@
         </a>
     </h1>
     <div class="flow-text section" itemprop="text">
-        <p>有个东西叫做<code>uvloop</code>, 使用了cython，最初以为用cython要写很多c代码所以不怎么在意这玩意。</p>
-<p>然后今晚突发奇想: cython能不能编译原生python代码? 于是随手搜了一下，看到一个<a href="https://moonlet.gitbooks.io/cython-document-zh_cn/content/ch1-basic_tutorial.html">Cython 的基础</a>。</p>
+        <p>有个东西叫做<code>uvloop</code>, 他使用cython编写，是为了提高asyncio的性能，而咱最初以为用cython要写很多c代码，所以并不怎么在意这玩意。</p>
+<p>然后今晚突发奇想: cython能不能编译纯python代码? 于是随手搜了一下，看到一个<a href="https://moonlet.gitbooks.io/cython-document-zh_cn/content/ch1-basic_tutorial.html">Cython 的基础</a>。</p>
 <p>What??? 还真能编译??!! 这就上天了。立马测试了一下<code>print('test')</code>，然后写了个<code>setup.py</code></p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 <span class="kn">from</span> <span class="nn">Cython.Build</span> <span class="kn">import</span> <span class="n">cythonize</span>

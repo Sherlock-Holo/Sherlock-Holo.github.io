@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>夏洛克狼 - computer science</title><link href="sherlock-holo.github.io/" rel="alternate"></link><link href="sherlock-holo.github.io/feeds/computer-science.atom.xml" rel="self"></link><id>sherlock-holo.github.io/</id><updated>2017-03-04T00:00:00+08:00</updated><entry><title>夏娜酱推荐的书</title><link href="sherlock-holo.github.io/xia-nuo-jiang-tui-jian-de-shu.html" rel="alternate"></link><published>2017-03-04T00:00:00+08:00</published><updated>2017-03-04T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-03-04:sherlock-holo.github.io/xia-nuo-jiang-tui-jian-de-shu.html</id><summary type="html">&lt;p&gt;研究计算机底层的好书&lt;/p&gt;</summary><content type="html">&lt;p&gt;先mark着先，夏娜酱给的书名都是研究底层的好书😋&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSAPP&lt;/li&gt;
+&lt;li&gt;LDD&lt;/li&gt;
+&lt;li&gt;ULK&lt;/li&gt;
+&lt;li&gt;UNP&lt;/li&gt;
+&lt;li&gt;APUE&lt;/li&gt;
+&lt;li&gt;TCP/IP&lt;/li&gt;
+&lt;li&gt;Intel Manual&lt;/li&gt;
+&lt;li&gt;Operating System&lt;/li&gt;
+&lt;/ul&gt;</content><category term="CS"></category></entry></feed>

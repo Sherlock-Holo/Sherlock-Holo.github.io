@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>夏洛克狼 - python</title><link href="sherlock-holo.github.io/" rel="alternate"></link><link href="sherlock-holo.github.io/feeds/python.atom.xml" rel="self"></link><id>sherlock-holo.github.io/</id><updated>2017-09-13T00:00:00+08:00</updated><entry><title>上天的Cython</title><link href="sherlock-holo.github.io/shang-tian-de-cython.html" rel="alternate"></link><published>2017-09-13T00:00:00+08:00</published><updated>2017-09-13T00:00:00+08:00</updated><author><name>Sherlock Holo</name></author><id>tag:None,2017-09-13:sherlock-holo.github.io/shang-tian-de-cython.html</id><summary type="html">&lt;p&gt;了解到Cython&lt;/p&gt;</summary><content type="html">&lt;p&gt;有个东西叫做&lt;code&gt;uvloop&lt;/code&gt;, 他使用cython编写，是为了提高asyncio的性能，而咱最初以为用cython要写很多c代码，所以并不怎么在意这玩意。&lt;/p&gt;
+&lt;p&gt;然后今晚突发奇想: cython能不能编译纯python代码? 于是随手搜了一下，看到一个&lt;a href="https://moonlet.gitbooks.io/cython-document-zh_cn/content/ch1-basic_tutorial.html"&gt;Cython 的基础&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;What??? 还真能编译??!! 这就上天了。立马测试了一下&lt;code&gt;print('test')&lt;/code&gt;，然后写了个&lt;code&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Cython.Build&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cythonize&lt;/span&gt;
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;ext_modules&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cythonize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cp.pyx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;测试了一下: &lt;code&gt;python setup.py build_ext&lt;/code&gt;，进去python console，&lt;code&gt;import cp&lt;/code&gt;，还真成功了。&lt;/p&gt;
+&lt;p&gt;这。。。是不是意味着。。。用python写了CPU密集的东西后用cython编译一下就可以让性能有所提高? 想想都有点兴奋呢~&lt;/p&gt;</content><category term="Python"></category></entry></feed>
